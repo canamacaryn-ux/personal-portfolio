@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mae Caryn Portfolio</title>
+   <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+
+    <div class="left-panel">
+        <img src="image.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>Caryn Canama</h2>
+        <h3>BSIT Student</h3>
+    </div>
+
+    <div class="right-content">
+
+        <div class="top-buttons">
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('about')">About Me</button>
+            <button onclick="showSection('hobbies')">Hobbies</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </div>
+
+        <div id="home" class="section active">
+            <h1>Welcome to my Portfolio!</h1>
+            <h3>Hello! I’m Caryn Canama</h3>
+        </div>
+
+        <div id="about" class="section">
+            <h1>About Me</h1>
+            <p></p> Hi! I’m Caryn Canama, a college student who enjoys learning new things and creating simple projects. I like organizing, designing clean layouts, and exploring creative ideas. I value consistency, honesty, and doing my best in everything I work on. In my free time, I enjoy music, relaxing moments, and spending time with the people I care about.I believe that growth starts with small steps, and I’m excited to continue improving day by day.
+        </div>
+
+        <div id="hobbies" class="section">
+            <h1>Hobbies</h1>
+            <ul>
+                <li><h4>Playing Guitar</h4></li>
+                <li><h4>Reading Wattpad Stories</h4></li>
+                <li><h4>Singing</h4></li>
+                <li><h4>Cooking</h4></li>
+                
+            </ul>
+        </div>
+
+        <div id="contact" class="section">
+            <h1>Contact</h1>
+            <ul>
+                <li>canamacaryn@gmail.com</li>
+                <li>09xxx-xxx-xxx</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
